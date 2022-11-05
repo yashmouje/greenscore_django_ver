@@ -1,0 +1,40 @@
+{% extends "./base.html" %}
+{% block content %}
+<div class="col-md-4 scores-form">
+<form>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">How Do You Travel?</label>
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="walk">
+  <label class="form-check-label" for="walk">
+  I Walk
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="public-transport" checked>
+  <label class="form-check-label" for="public-transport">
+    Public Transport
+  </label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="drive">
+<label class="form-check-label" for="drive">
+I Drive
+</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="cycle">
+  <label class="form-check-label" for="cycle">
+    I Cycle
+  </label>
+</div>
+<div class="mb-3"></div>
+</form>
+</div>
+
+
+{% endblock %}
