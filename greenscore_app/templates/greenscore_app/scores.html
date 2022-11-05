@@ -1,7 +1,7 @@
 {% extends "./base.html" %}
 {% block content %}
 <div class="col-md-4 scores-form">
-<form>
+<form name="GreenScore-Form">
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
     <input type="text" class="form-control" id="name">
@@ -9,25 +9,25 @@
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">How Do You Travel?</label>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="walk">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="walk" value="2">
   <label class="form-check-label" for="walk">
   I Walk
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="public-transport" checked>
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="public-transport" value="1" checked>
   <label class="form-check-label" for="public-transport">
     Public Transport
   </label>
 </div>
 <div class="form-check">
-<input class="form-check-input" type="radio" name="flexRadioDefault" id="drive">
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="drive" value="0">
 <label class="form-check-label" for="drive">
 I Drive
 </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="cycle">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="cycle" value="2">
   <label class="form-check-label" for="cycle">
     I Cycle
   </label>
@@ -35,23 +35,33 @@ I Drive
 <div class="mb-3">
 <label for="exampleFormControlInput1" class="form-label">Do You Recycle?</label>
 <div class="form-check">
-<input class="form-check-input" type="radio" name="flexRadioDefault" id="Always">
+<input class="form-check-input" type="radio" name="flexRadioDefault2" id="Always">
 <label class="form-check-label" for="walk">
 Always
 </label>
 </div>
 <div class="form-check">
-<input class="form-check-input" type="radio" name="flexRadioDefault" id="sometimes" checked>
+<input class="form-check-input" type="radio" name="flexRadioDefault2" id="sometimes" checked>
 <label class="form-check-label" for="public-transport">
 Sometimes
 </label>
 </div>
 <div class="form-check">
-<input class="form-check-input" type="radio" name="flexRadioDefault" id="never">
+<input class="form-check-input" type="radio" name="flexRadioDefault2" id="never">
 <label class="form-check-label" for="never">
 Never
 </label>
 </div>
+</div>
+<label class="form-check-label" for="public-transport">
+Do You Switch Off Appliances after use?
+</label>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switch-off" value="1">
+  <label class="form-check-label" for="switch-off">Yes</label>
+</div>
+<div class="col-md-submit mx-auto">
+<button type="button" class="btn btn-primary" onclick="manipulateForm()">Submit</button>
 </div>
 </div>
 </form>
